@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Nanum+Gothic:wght@700&family=Noto+Sans+KR:wght@100&family=Poor+Story&display=swap" rel="stylesheet">
+
+
+
+
+    <style>
+      body{margin:0;
+          font-family: 'Noto Sans KR', sans-serif;}
+      a{text-decoration: none;}
+
+      header{background-color:rgb(218, 223, 226);
+             padding: 20px;
+             text-align:center;}
+
+  
+      div{background-color:rgb(223, 225, 255);
+          text-align: center;
+          height:200px;
+          }
+  </style>
+
+</head>
+<body>
+    <header class="introduce">
+        <h1> < BLOG PROJECT ></h1>
+        <h3> 우리 팀을 소개합니다! </h3>
+    </header>
+    
+    <div class = "container">
+   
+    {% for member in members %} 
+        
+        <div>
+	        <h3>-- {{member.your_Name}} -- 
+                <h4><p>MAJOR : {{member.your_Major}}</p>
+                    <p>MBTI : {{member.your_MBTI}}</p>
+                    <p>FAVORITE : {{member.your_Favorite}}</p>
+                    <p>AGE : {{member.your_Age}}</p></h4>
+	       
+            </h3>
+        </div>
+
+    {% endfor %}
+    </div>
+</body>
+</html>
